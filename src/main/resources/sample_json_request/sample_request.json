@@ -1,0 +1,47 @@
+1. API to Place a sell order for LIMIT_ORDER
+
+POST : http://localhost:8080/addOrder
+{
+	"clientId" : "CLIENT001",
+	"securityId" : "REL",
+	"units" :  100,
+	"value" : 80,
+	"isBuying" : false,
+	"orderType" : "LIMIT_ORDER"
+}
+
+2. API to Place a buy order for MARKET_ORDER
+
+POST : http://localhost:8080/addOrder
+{
+"clientId" : "CLIENT001",
+"securityId" : "REL",
+"units" :  100,
+"value" : 80,
+"isBuying" : true,
+"orderType" : "MARKET_ORDER"
+}
+
+3. API to update an order
+POST : http://localhost:8080/updateOrder
+{
+	"orderId": 0,
+	"units": 102,
+	"value": 90
+}
+
+
+
+4. API to cancel an order
+GET : http://localhost:8080/cancelOrder/{orderId}
+
+for ex: http://localhost:8080/cancelOrder/2
+
+
+5. API to list all orders
+GET : http://localhost:8080/getOrders/
+
+6. API to list all orders by securityId
+GET: http://localhost:8080/getOrders/{securityId}
+
+for ex: http://localhost:8080/getOrders/REL
