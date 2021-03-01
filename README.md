@@ -1,6 +1,6 @@
 # Price-Time priority order matching engine
 
-##Features
+## Features
 - Order matching engine is written in Java using spring boot
 - API's are provided to 
     - place an order
@@ -43,7 +43,7 @@ If two orders have the same price, execution priority is given to the first arri
 ## API details
 **please refer resources folder for sample JSON requests**
 
-####API to place an order
+#### API to place an order
 - POST http://localhost:8080/addOrder
 - Sample request for a sale order
 <pre>
@@ -63,7 +63,7 @@ If two orders have the same price, execution priority is given to the first arri
     - false for ask (sell) orders 
 </pre>
 
-###API to update an order
+### API to update an order
 - POST : http://localhost:8080/updateOrder
 <pre>
 {
